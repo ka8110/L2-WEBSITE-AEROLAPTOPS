@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+  </head>
+  <body>
+    <!--Copy and paste of the navbar from index.html-->
+    <header>
+      <h1 class="logo">AeroLaptops</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    <!--Contains the contact-box and helps align in the center of the screen-->
+    <div class="container">
+      <!--Contains the content of the contact form-->
+      <div class="contact-box">
+        <!--It is the left side of the contact box or the upper when resized, contains the form to fill
+        out-->
+        <div class="contact-left">
+          <h2>Message Us</h2>
+          <form>
+            <input type="text" class="form-input" placeholder="Name" required><br>
+            <input type="text" class="form-input" placeholder="Email" required><br>
+            <textarea class="form-input" rows="5" placeholder="Message" required></textarea><br>
+            <input type="submit" class="form-input submit" value="Submit" >
+          </form>
+        </div>
+        <!--It is the right side of the contact box or the bottom one when resized, contains the info
+        of the company-->
+        <div class="contact-right">
+          <h2>Contact Us</h2>
+          <div class="info-box">
+            <div class="info-icon"><i class="fa fa-map-marker"></i>
+            </div>
+            <div class="info-text">
+              <h3>Address</h3>
+              <h4>Onehunga, Auckland, New Zealand</h4>
+            </div>
+          </div>
+        <!--It is the contact info, location and number of the company-->
+        <div class="info-box">
+            <div class="info-icon"><i class="fa fa-phone"></i>
+            </div>
+            <div class="info-text">
+              <h3>Phone Number</h3>
+              <h4>+64 020 040 0800</h4>
+            </div>
+          </div>
+        <div class="info-box">
+            <div class="info-icon"><i class="fa fa-envelope-o"></i>
+            </div>
+            <div class="info-text">
+              <h3>Email</h3>
+              <h4>unknown@email.com</h4>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </body>
+</html>

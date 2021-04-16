@@ -1,0 +1,104 @@
+/*Responsive NavBar*/
+@media screen and (min-width: 1000px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(700px, 1fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    transform: translateY(0%);
+  }
+  
+  nav {
+    grid-column: 3 / 4;
+    all: unset;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  nav li {
+    margin-left: 2em;
+  }
+  
+  nav a::after {
+    background: #0d0c0c;
+  }
+}
+
+/*Makes Cards In Main Page Responsive*/
+
+@media screen and (max-width:1200px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .card {
+    width: 80%;
+  }
+}
+
+/*Makes The Image And Texts Inside The Trending-Container Of The Main Page Responsive*/
+@media screen and (max-width: 1100px) {
+  
+  .trending-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wrapper {
+    height: auto;
+    padding-bottom: 10vh;
+  }
+  
+  .wrapper-img {
+    margin-top: 3em;
+  }
+  
+  .btn {
+    display:block;
+    width: 40vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .wrapper-text {
+    text-align: center;
+  }
+  
+  .wrapper-title {
+    text-align: center;
+    font-size: 4em;
+  }
+
+  .column img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 0;
+  }
+}
+
+/*Makes contact-page responsive*/
+@media screen and (max-width: 1000px) {
+  .contact-box {
+    flex-direction: column;
+  }
+}
+
+

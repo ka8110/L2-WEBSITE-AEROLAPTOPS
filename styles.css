@@ -1,0 +1,449 @@
+/*Sets everything to 0 margin and padding and have a the sans-serif font family*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*This allows the navbar to have the sticky effect, a set hieght and a 3d effect
+wth shadows*/
+header {
+  background: #6629a3;
+  text-align: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  height: 10vh;
+  box-shadow: 0 10px 20px 0;
+}
+
+/*Sets the logo's margin placement and color*/
+.logo {
+  margin: 0;
+  transform: translateY(25%);
+  color: white;
+}
+
+/*made the nav absolute to be relative to the header, added transforms and transition
+add the animation*/
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  background: #0d0c0c;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: all 250ms ease-in-out;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Groups the links together*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/*Decorates the links look*/
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/*Creates the line under the links*/
+nav a::after {
+  content: '';
+  display: block;
+  height: 6px;
+  background: #6629a3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: all ease-in-out 250ms;
+}
+
+/*Adds in the animation on hover*/
+nav a:hover::after {
+  transform: scale(1, 1);
+}
+
+/*Makes a checkbox to click on for the nav to pop up*/
+.nav-toggle:checked ~ nav {
+  transform: translateX(0%);
+}
+
+/*By defualt checkbox comes up when using the checkbox command
+so I used display none to remove it and replace it with the 
+burger menu*/
+.nav-toggle {
+  display: none;
+}
+
+/*Creates the middle line between the burger menu*/
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/*Used after and before pseudo elements to create lines before 
+and after the middle line creating a burger menu*/
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background-color: white;
+  height: 3px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+/*Used absolute to make the lines relative to the 
+nav-toggle-label container to contain the lines without
+stretching out*/
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+/*Places the before line above the middle line*/
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+/*Places the after line below the middle line*/
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+/*This makes the slider bigger*/
+#slider {
+  overflow: hidden;
+}
+
+/*Because there are 5 images I made each of them a width of 20%
+to make it fit the whole screen*/
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+/*Each image has a width of 100% so 500% is because there are 5 images
+100x5, also gave an animation name, and looped it*/
+#slider figure {
+  position: relative;
+  width: 500%;
+  left: 0;
+  animation: slider 20s infinite;
+  margin: 0;
+}
+
+/*Keyframes the animation of the images, at the end it is 0 to restart
+and loop it.*/
+@keyframes slider {
+  0% {left: 0;}
+  20% {left: 0;}
+  25% {left: -100%;}
+  45% {left: -100%;}
+  50% {left: -200%;}
+  70% {left: -200%;}
+  75% {left: -300%;}
+  80% {left: -300%;}
+  90% {left: -400%;}
+  95% {left: -400%;}
+  100% {left: 0;}
+}
+
+/*Contains everything and used display flex to make the
+two column elements into a row*/
+.trending-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*makes two columns space out and grow at the same rate*/
+.column {
+  flex: 1;
+  padding: 0 1em;
+}
+
+/*Colors the title*/
+.column h1 {
+  color: 	#6629a3;
+}
+
+/*Makes the button, added transition to animate it*/
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: #6629a3;
+  padding: 1em 4em;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0 0 20px black;
+  transition: 0.2s;
+}
+
+/*Transforms the button on hover*/
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px black;
+}
+
+/*Colors the trending container and sets a height*/
+.wrapper {
+  background: linear-gradient(to left, #83a4d4 , #8f3d7a);
+  padding: 15vh 0 0 0;
+  height: 80vh;
+}
+
+/* Changes the font size and space out the title from the text*/
+.wrapper-title {
+  font-size: 8vw;
+  line-height: 1;
+  margin: 0 0 .5em 0;
+}
+
+/*Spaces the text from the button and makes the text bigger*/
+.wrapper-text {
+  font-size: 1.2em;
+  line-height: 1.7;
+  margin: 0 0 1.5em 0;
+}
+
+/*Spaces the cards evenly and makes it start at as row*/
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap row;
+}
+
+/*Makes the card, the flex is used to make the every card adjusted 
+to the same height*/
+.card {
+  margin-top: 4em;
+  width: 20%;
+  height: auto;
+  background-color: white;
+  transition: 200ms;
+  box-shadow: 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Transforms the cards bigger on hover*/
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px;
+}
+
+/*Creates the heading where the image is*/
+.card-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
+/*A modifier of card-heading making the background red*/
+.card--red {
+  background: linear-gradient(to right, #e60b1e, #7d0913);
+}
+
+/*A modifier of card-heading making the background green*/
+.card--green {
+  background: linear-gradient(to right, #20c74c, #1f6933);
+}
+
+/*A modifier of card-heading making the background blue*/
+.card--blue {
+  background: linear-gradient(to right, #2ababf, #1b7275);
+}
+
+/*A modifier of card-heading making the background gray*/
+.card--gray {
+  background: linear-gradient(to right, #cbd3d4, #262929);
+}
+
+/*Creats a space for the text and aligns them to center*/
+.card-info {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/*Makes the button for the cards with a transition*/
+.card-btn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  background: #6629a3;
+  padding: 10px 5px;
+  margin: 1em auto;
+  text-decoration: none;
+  color: white;
+  border-radius: 100vh;
+  transition: 0.3s;
+}
+
+/*Customizes the title for the cards*/
+.card-info h2 {
+  margin: 0;
+  padding: 0 0 0.5em 0;
+  font-size: 2.4em;
+  line-height: 1em;
+  color: #444;
+}
+
+/*Transforms the button on hover with shadows to
+create a 3d effect*/
+.card-btn:hover {
+  width: 70%;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px black;
+}
+
+/*Makes a set height for the footer with a color set,
+made into position relative to be relative for copyright*/
+footer {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: #444;
+  margin-top: 50px;
+}
+
+/*Position absolute to footer and made to be to the 
+bottom left*/
+.copyright {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 1em;
+}
+
+/*Decorates the text*/
+.copyright h2 {
+  color: white;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+/*Invisible container for the contact form with text align
+to center to make the text inside in the center*/
+.container {
+  width: 90%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+/*This container makes the contact-left and contact-right
+and then displays flex so it goes next eachother in a row*/
+.contact-box {
+  background: white;
+  display: flex;
+  box-shadow: 0 0 15px;
+}
+
+/*flex-basis of 50% to grow 50% of the contact-box 
+and a padding of 80 to increaase the length and space
+the items in the middle*/
+.contact-left {
+  flex-basis: 60%;
+  padding: 80px;
+}
+
+/*Same as contact-left it has a flex-basis of 50%
+to grow at the same rate as the other*/
+.contact-right {
+  flex-basis: 40%;
+  background: #37414d;
+  padding: 80px;
+  color: white;
+}
+
+/*Inside the contact-left it adjusts the width,
+makes it see through and spaces it out from other
+inputs*/
+.form-input {
+  width: 90%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #6629a3;
+  color: black;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+/*The input itself with a height of 50px*/
+input {
+  height: 50px;
+}
+
+/*Makes the button for contact with a transition*/
+.submit {
+  background: #6629a3;
+  border-radius: 100vh;
+  border: none;
+  width: 20vh;
+  color: white;
+  transition: all 150ms ease-in-out;
+}
+
+/*Transforms it on hover*/
+.submit:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px black;
+}
+
+/*makes each line of info, the location, number and address,
+all in in a flex and padded out more into the center.*/
+.info-box {
+  display: flex;
+  padding: 2em 0;
+  text-align: left;
+}
+
+/*Makes the icon next to the info-box aligned with it
+and decorates it with the fa fa elements*/
+.info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  height: 50px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+}
+
+/*Aligns the info-box's text in a columns so they dont go on
+a row and spaces it out from eachother*/
+.info-text h3, h4{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding: 5px 0;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="responsive.css">
+  </head>
+  <body>
+    <!--Copy and past of the navbar from index.html-->
+    <header>
+      <h1 class="logo">AeroLaptops</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="Login.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    <!--Contains the login form-->
+    <div class="container">
+      <!--The contact-box contains the contents -->
+      <div class="contact-box">
+        <h2>Login</h2>
+        <form>
+          <input type="text" class="form-input" placeholder="Username" required><br>
+          <input type="text" class="form-input" placeholder="Email" required><br>
+          <input type="password" class="form-input" placeholder="Password" required>
+          <input type="submit" class="submit" value="Login" >
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

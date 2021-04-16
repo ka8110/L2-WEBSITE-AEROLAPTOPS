@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link rel="stylesheet" href="styles.css">
+  	<link rel="stylesheet" href="responsive.css">
+  </head>
+  <body>
+  <!--Contains the slider-->
+  <div id="slider">
+    <figure>
+      <!--The images for the slider, I made the slideshow first karlin got the idea from me-->
+      <img src="http://cdn.mos.cms.futurecdn.net/6t8Zh249QiFmVnkQdCCtHK.jpg">
+      <img src="https://cdn.mos.cms.futurecdn.net/vEcELHdn998wRTcCzqV5m9.jpg">
+      <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_1208082286_427081.jpg">
+      <img src="https://blueprint-api-production.s3.amazonaws.com/uploads/card/image/1466861/8198a90d-0aad-404c-9a3d-6dd1ed0c9e3b.png">
+      <img src="https://cdn.mos.cms.futurecdn.net/gPvyaz76tASn87RCGuSdDc.jpg">
+      </figure>
+    </div>
+    <!--The header for the navbar-->
+    <header>
+      <!--Logo of the website-->
+      <h1 class="logo">AeroLaptops</h1>
+      <!--Allows me to make a checkbox that can be modified and clicked on for a responsive navbar-->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <!--Contains the rest of the nav-->
+      <nav>
+        <!--Contains the links to my other pages-->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!--Allows me to create three lines and replace the checkbox for a burger menu-->
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    <section>
+      <!--Wraps the trending container-->
+      <div class="wrapper">
+        <div class="trending-container">
+          <!--Made two columns to seperate content from image-->
+          <div class="column">
+            <h1 class="wrapper-title">LAPTOPS</h1>
+            <p class="wrapper-text">Laptops are cool and come in many different brands, some brands are better than others or have more style and uniquness than others. </p>
+            <a href="#" class="btn">Buy now!</a>
+          </div>
+          <div class="column">
+            <!--Sets the razer laptop image max and min width with a scaling width-->
+            <img src="razer.png" class="wrapper-img" style="width: 70vw; min-width: 300px;
+            max-width: 600px;">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Contains the cards that link to the shop page-->
+    <div class="card-container">  
+      <div class="card">
+        <!--Added class modifiers to chagne each cards colour-->
+        <div class="card-heading card--red">
+          <img src="asuslogo.png" style="width: 200px; height: 200px;">
+        </div>
+        <div class="card-info">
+          <h2>ASUS</h2>
+          <p>Asus cool brand everybody likes it</p>
+        </div>
+        <a href="shop.html#asus" class="card-btn">Check Out</a>
+      </div>
+      <div class="card">
+        <div class="card-heading card--green">
+          <img src="omenlogo.png" style="width: 200px; height: 200px;">
+        </div>
+        <div class="card-info">
+          <h2>OMEN</h2>
+          <p>Omen cool brand but only for microsoft people</p>
+        </div>
+        <a href="shop.html#omen" class="card-btn">Check Out</a>
+      </div>
+      <div class="card">
+        <div class="card-heading card--blue">
+          <img src="acerlogo.png" style="width: 200px; height: 200px;">
+        </div>
+        <div class="card-info">
+          <h2>ACER</h2>
+          <p>Acer balanced overall no comments</p>
+        </div>
+        <a href="shop.html#acer" class="card-btn">Check Out</a>
+      </div>
+      <div class="card">
+        <div class="card-heading card--gray">
+          <img src="dell-logo.png" style="width: 200px; height: 200px;">
+        </div>
+        <div class="card-info">
+          <h2>DELL</h2>
+          <p>Dell was cool now bad and now eh level</p>
+        </div>
+        <a href="shop.html#dell" class="card-btn">Check Out</a>
+      </div>
+    </div>
+    <!--The footor class to close my page and look cool-->
+    <footer>
+    </footer>
+  </body>  
+</html>

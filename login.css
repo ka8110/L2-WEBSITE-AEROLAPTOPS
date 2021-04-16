@@ -1,0 +1,186 @@
+/*Sets everything to 0 margin and padding and have a the sans-serif font family*/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/*This allows the navbar to have the sticky effect, a set hieght and a 3d effect
+wth shadows*/
+header {
+  background: #6629a3;
+  text-align: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  height: 10vh;
+  box-shadow: 0 10px 20px 0;
+}
+
+/*Sets the logo's margin placement and color*/
+.logo {
+  margin: 0;
+  transform: translateY(25%);
+  color: white;
+}
+
+/*made the nav absolute to be relative to the header, added transforms and transition
+add the animation*/
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  background: #0d0c0c;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: all 250ms ease-in-out;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Groups the links together*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/*Decorates the links look*/
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/*Creates the line under the links*/
+nav a::after {
+  content: '';
+  display: block;
+  height: 6px;
+  background: #6629a3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: all ease-in-out 250ms;
+}
+
+/*Adds in the animation on hover*/
+nav a:hover::after {
+  transform: scale(1, 1);
+}
+
+/*Makes a checkbox to click on for the nav to pop up*/
+.nav-toggle:checked ~ nav {
+  transform: translateX(0%);
+}
+
+/*By defualt checkbox comes up when using the checkbox command
+so I used display none to remove it and replace it with the 
+burger menu*/
+.nav-toggle {
+  display: none;
+}
+
+/*Creates the middle line between the burger menu*/
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/*Used after and before pseudo elements to create lines before 
+and after the middle line creating a burger menu*/
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background-color: white;
+  height: 3px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+/*Used absolute to make the lines relative to the 
+nav-toggle-label container to contain the lines without
+stretching out*/
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+/*Places the before line above the middle line*/
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+/*Places the after line below the middle line*/
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+/*Makes a container to center the contact-box for the login*/
+.container {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin: 100px auto;
+}
+
+/*Makes a contact-box for the login form*/
+.contact-box {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 15px;
+  padding: 30px;
+}
+
+/* decorates all the form inputs*/
+.form-input {
+  width: 90%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #6629a3;
+  color: black;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+/*Sets a height for all form inputs*/
+input {
+  height: 70px;
+}
+
+/*decorates the button and adding a transition for animation*/
+.submit {
+  background: #6629a3;
+  border: none;
+  padding: 1em 3em;
+  margin: 20px auto;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 100vh;
+  transition: all 200ms ease-in-out;
+}
+
+/*Transforms the button and addded shadow for 3d effect*/
+.submit:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px black;
+}
